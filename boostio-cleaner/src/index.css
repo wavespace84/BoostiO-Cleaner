@@ -1,0 +1,89 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 10 11 15;
+    --foreground: 0 0 100%;
+    --card: 18 19 26;
+    --card-foreground: 0 0 100%;
+    --primary: 230 36 95%;
+    --primary-foreground: 0 0 100%;
+    --secondary: 268 36 85%;
+    --secondary-foreground: 0 0 100%;
+    --muted: 215 20 65%;
+    --muted-foreground: 217 32 91%;
+    --accent: 248 36 94%;
+    --accent-foreground: 0 0 100%;
+    --border: 240 6 20%;
+    --input: 240 6 20%;
+    --ring: 230 36 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-glass-bg backdrop-blur-xl border border-glass-border;
+  }
+  
+  .glass-effect-strong {
+    @apply bg-glass-strong backdrop-blur-xl border border-glass-border;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-secondary bg-clip-text text-transparent;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(139, 155, 243, 0.3);
+  }
+  
+  .shadow-glow-strong {
+    box-shadow: 0 0 60px rgba(139, 155, 243, 0.5);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted rounded-full;
+  transition: background-color 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,16 @@
+appId: com.boostio.cleaner
+productName: BoostiO Cleaner
+directories:
+  output: dist
+files:
+  - "build/**/*"
+  - "electron/**/*"
+  - "node_modules/**/*"
+  - "package.json"
+extraMetadata:
+  main: electron/main.js
+win:
+  target: nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
